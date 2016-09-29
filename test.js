@@ -110,7 +110,7 @@ const res = await request(app)
 
 test('Get Vehicles By Email' ,async t =>{
 const res = await request(app)
-  .get('/api/vehicle?UserEmail=John@Smith.com')
+  .get('/api/vehicle?email=John@Smith.com')
     t.is(res.status, 200, 'Status is not 200')
     // t.is(res.body.length >=3 , 'Expected at least 3 cars for John@Smith.com')
     t.truthy(res.body[0].email, 'Expected to see an email propety')
